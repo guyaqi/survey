@@ -40,6 +40,46 @@ for(var i=1;i<divs.length;i++) {
 }
 
 $("#btn1").click(function(){
-    $("div1").hide();
-    $("div2").show();
+    $("#div1").hide();
+    $("#div2").show();
+})
+
+$("#btn2").click(function(){
+    $("#div2").hide();
+    $("#div3").show();
+})
+
+$("#btn3").click(function(){
+    $("#div3").hide();
+    $("#div4").show();
+})
+
+$("#btn4").click(function(){
+    $("#div4").hide();
+    $("#div5").show();
+})
+
+$("#btn5").click(function(){
+    $("#div5").hide();
+    $("#div6").show();
+})
+
+$("#btn6").click(function(){
+    $("#div6").hide();
+    $("#div7").show();
+})
+
+$("#btn7").click(function(){
+    $("#div7").hide();
+    $("#div8").show();
+})
+
+$("#btn8").click(function(){
+    $("#div8").hide();
+    $("#div9").show();
+})
+
+$("#btn9").click(function(){
+    $("#div9").hide();
+    $("#div10").show();
 })

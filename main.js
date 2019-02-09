@@ -1,3 +1,21 @@
+function login() {
+    $.ajax({
+        type: "POST",
+        dataType: "json",
+        url: "submit.php" ,
+        data: $('#hiddenForm').serialize(),
+        success: function (result) {
+            console.log("Hello");
+            return false;
+        },
+        error : function() {
+            console.error("err");
+        }
+    });
+}
+
+
+
 $(function(){
     // hide all container exclude div1
     for(var i=2;i<=10;i++) {
@@ -92,8 +110,12 @@ $(function(){
         form.appendChild(ltInput);
 
         form.hidden="hidden";
+        form.id = "hiddenForm";
         document.body.appendChild(form);
+        
+        form.target = "rfFrame";
         form.submit();
+        // login();
 
     })
 })

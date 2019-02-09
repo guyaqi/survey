@@ -1,15 +1,3 @@
-var record = {
-    name : "",
-    age : "",
-    education : "",
-    language : "",
-    firstLang : "",
-    learnTime : "",
-
-    timeSpent : 0,
-    correctRate: 0
-};
-
 $(function(){
     // hide all container exclude div1
     for(var i=2;i<=10;i++) {
@@ -68,6 +56,45 @@ $(function(){
         $("#div9").hide();
         $("#div10").show();
         $("#title").text("Thanks");
+
+        var form = document.createElement("form");
+        form.method = "post";
+        form.action = "submit.php";
+
+        var nameInput = document.createElement("input");
+        nameInput.setAttribute("name", "Name");
+        nameInput.setAttribute("value", $("#Name").val());
+        form.appendChild(nameInput);
+
+        var ageInput = document.createElement("input");
+        ageInput.setAttribute("name", "Age");
+        ageInput.setAttribute("value", $("#Age").val());
+        form.appendChild(ageInput);
+
+        var eduInput = document.createElement("input");
+        eduInput.setAttribute("name", "Education");
+        eduInput.setAttribute("value", $("#Education").val());
+        form.appendChild(eduInput);
+
+        var langInput = document.createElement("input");
+        langInput.setAttribute("name", "Language");
+        langInput.setAttribute("value", $("#Language").val());
+        form.appendChild(langInput);
+
+        var flangInput = document.createElement("input");
+        flangInput.setAttribute("name", "FirstLanguage");
+        flangInput.setAttribute("value", $("#FirstLanguage").val());
+        form.appendChild(flangInput);
+
+        var ltInput = document.createElement("input");
+        ltInput.setAttribute("name", "LearntTime");
+        ltInput.setAttribute("value", $("#LearntTime").val());
+        form.appendChild(ltInput);
+
+        form.hidden="hidden";
+        document.body.appendChild(form);
+        form.submit();
+
     })
 })
 

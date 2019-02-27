@@ -41,7 +41,7 @@
             <div class="row">
                 <div class="col">
                     <button id="btn1" type="button" class="btn btn-primary pull-right">
-                        &nbsp;&nbsp;&nbsp;&nbsp;Start&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;Next&nbsp;&nbsp;&nbsp;&nbsp;
                     </button>
                 </div>
             </div>
@@ -65,6 +65,7 @@
                 <div class="col">
                     <div class="big-sep"></div>
                     <h5 class="text-center">Part One: Language Background Survey</h5>
+                    <div class="big-sep"></div>
                     <p>
                         Your information will <b>only</b> be used for research purposes.<br/> 
                         For the accuracy of the study, please complete the survey <b>honestly</b>.                            
@@ -74,7 +75,7 @@
             <div class="row">
                 <div class="col">
                     <button id="btn2" type="button" class="btn btn-primary pull-right">
-                        &nbsp;&nbsp;&nbsp;&nbsp;Start&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;Next&nbsp;&nbsp;&nbsp;&nbsp;
                     </button>
                 </div>
             </div>
@@ -82,204 +83,210 @@
 
         <div id="div3" class="container">
             <div class="row">
-                    <div class="col">
-                        <form>
-                            <div class="form-group">
-                                <label for="Age"><b>Age:</b></label>
-                                <input type="text" class="form-control" id="Age">
+                <div class="col-md-2">
+                    
+                </div>
+                <div class="col-md-8">
+                    <form>
+                        <div class="form-group">
+                            <label for="Age"><b>Age:</b></label>
+                            <input type="text" class="form-control" id="Age">
+                        </div>
+                        <div class="form-group">
+                            <label for="FirstLang"><b>First Languages:</b></label>
+                            <input type="text" class="form-control" id="FirstLang">
+                        </div>
+                        <div class="form-group">
+                            <label for="DailyLang"><b>Most used language in your daily life:</b></label>
+                            <input type="text" class="form-control" id="DailyLang">
+                        </div>
+                        <div class="form-group">
+                            <label for="StartEng"><b>At what age did you start learning English?</b>
+                                <span style="color:grey">(Type 0 if your first language is English)</span>:
+                            </label>
+                            <input type="text" class="form-control" id="StartEng">
+                        </div>
+                        <div class="form-group">
+                            <p><b>How would you describe your educational background?</b></p>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">High school or lower</label>
                             </div>
-                            <div class="form-group">
-                                <label for="FirstLang"><b>First Languages:</b></label>
-                                <input type="text" class="form-control" id="FirstLang">
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">College/undergraduate</label>
                             </div>
-                            <div class="form-group">
-                                <label for="DailyLang"><b>Most used language in your daily life:</b></label>
-                                <input type="text" class="form-control" id="DailyLang">
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Graduate</label>
                             </div>
-                            <div class="form-group">
-                                <label for="StartEng"><b>At what age did you start learning English?</b>
-                                    <span style="color:grey">(Type 0 if your first language is English)</span>:
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Postgraduate or higher</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <p><b>In which way did you mainly learn English?</b></p>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="">
+                                    School courses
                                 </label>
-                                <input type="text" class="form-control" id="StartEng">
                             </div>
-                            <div class="form-group">
-                                <p><b>How would you describe your educational background?</b></p>
-                                <div class="radio">
-                                    <label><input type="radio" name="optradio">High school or lower</label>
-                                </div>
-                                <div class="radio">
-                                    <label><input type="radio" name="optradio">College/undergraduate</label>
-                                </div>
-                                <div class="radio">
-                                    <label><input type="radio" name="optradio">Graduate</label>
-                                </div>
-                                <div class="radio">
-                                    <label><input type="radio" name="optradio">Postgraduate or higher</label>
-                                </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="">
+                                    Immigration to an English-speaking country
+                                </label>
                             </div>
-                            <div class="form-group">
-                                <p><b>In which way did you mainly learn English?</b></p>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value="">
-                                        School courses
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value="">
-                                        Immigration to an English-speaking country
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value="">
-                                        Self-teaching
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value="">
-                                        Some of my family members speak English 
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value="">
-                                        My family does not speak English but we are living in an English community
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value="">
-                                        English is my first language
-                                    </label>
-                                </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="">
+                                    Self-teaching
+                                </label>
                             </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="">
+                                    Some of my family members speak English 
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="">
+                                    My family does not speak English but we are living in an English community
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="">
+                                    English is my first language
+                                </label>
+                            </div>
+                        </div>
 
-                            <div class="form-group">
-                                <label for="comment">Other:</label>
-                                <textarea class="form-control" rows="5" id="comment"></textarea>
-                            </div>
+                        <div class="form-group">
+                            <label for="Other"><b>Other:</b></label>
+                            <input type="text" class="form-control" id="Other">
+                        </div>
 
-                            <div class="form-group">
-                                <p><b>Have you ever lived in an English-speaking community/country?</b></p>
-                                <div class="radio">
-                                    <label><input type="radio" name="optradio">No</label>
-                                </div>
-                                <div class="radio">
-                                    <label><input type="radio" name="optradio">Yes, &lt;= 3months</label>
-                                </div>
-                                <div class="radio">
-                                    <label><input type="radio" name="optradio">Yes, &lt;= 1 year </label>
-                                </div>
-                                <div class="radio">
-                                    <label><input type="radio" name="optradio">Yes, &lt;= 5 years</label>
-                                </div>
-                                <div class="radio">
-                                    <label><input type="radio" name="optradio">Yes, &lt;= 10 years</label>
-                                </div>
-                                <div class="radio">
-                                    <label><input type="radio" name="optradio">Yes, >10 years</label>
-                                </div>
+                        <div class="form-group">
+                            <p><b>Have you ever lived in an English-speaking community/country?</b></p>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">No</label>
                             </div>
-
-                            <div class="form-group">
-                                <p><b>How long do you use English every day (i.e. reading, speaking, listening, and writing)</b></p>
-                                <div class="radio">
-                                    <label><input type="radio" name="optradio">&lt;=30 minutes</label>
-                                </div>
-                                <div class="radio">
-                                    <label><input type="radio" name="optradio">&lt;=2 hours</label>
-                                </div>
-                                <div class="radio">
-                                    <label><input type="radio" name="optradio">&lt;=4 hours</label>
-                                </div>
-                                <div class="radio">
-                                    <label><input type="radio" name="optradio">&lt;=12 hours</label>
-                                </div>
-                                <div class="radio">
-                                    <label><input type="radio" name="optradio">I only use English</label>
-                                </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Yes, &lt;= 3months</label>
                             </div>
-
-                            <div class="form-group">
-                                <p><b>How would you rate your English proficiency?</b></p>
-                                <div class="radio">
-                                    <label><input type="radio" name="optradio">1-Only simple sentences</label>
-                                </div>
-                                <div class="radio">
-                                    <label><input type="radio" name="optradio">2-Able to use English to perform tasks, e.g. writing essays</label>
-                                </div>
-                                <div class="radio">
-                                    <label><input type="radio" name="optradio">3-Quite fluent in English, can perform better if given enough time</label>
-                                </div>
-                                <div class="radio">
-                                    <label><input type="radio" name="optradio">4-Fluent in English, but probably have some difficulties living/studying in an English environment</label>
-                                </div>
-                                <div class="radio">
-                                    <label><input type="radio" name="optradio">5-People cannot tell that you are not a native English speaker at the first sight,
-                                                                                but you still not exactly native-level</label>
-                                </div>
-                                <div class="radio">
-                                    <label><input type="radio" name="optradio">6-Native level</label>
-                                </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Yes, &lt;= 1 year </label>
                             </div>
-
-                            <div class="form-group">
-                                <p><b>What kind of English reading are you exposed to in your daily life?</b></p>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value="">
-                                        News
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value="">
-                                        Social media
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value="">
-                                        English captions of movies or shows
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value="">
-                                        Academic reading 
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value="">
-                                        Books, magazines
-                                    </label>
-                                </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Yes, &lt;= 5 years</label>
                             </div>
-
-                            <div class="form-group">
-                                <label for="comment">Other:</label>
-                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Yes, &lt;= 10 years</label>
                             </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Yes, >10 years</label>
+                            </div>
+                        </div>
 
-                            <!-- <div class="form-group">
-                                <label for="Language">Language:</label>
-                                <input type="text" class="form-control" id="Language" placeholder="Language">
-                            </div> -->
-                        </form>
-                    </div>
+                        <div class="form-group">
+                            <p><b>How long do you use English every day (i.e. reading, speaking, listening, and writing)</b></p>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">&lt;=30 minutes</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">&lt;=2 hours</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">&lt;=4 hours</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">&lt;=12 hours</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">I only use English</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <p><b>How would you rate your English proficiency?</b></p>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">1-Only simple sentences</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">2-Able to use English to perform tasks, e.g. writing essays</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">3-Quite fluent in English, can perform better if given enough time</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">4-Fluent in English, but probably have some difficulties living/studying in an English environment</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">5-People cannot tell that you are not a native English speaker at the first sight,
+                                                                            but you still not exactly native-level</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">6-Native level</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <p><b>What kind of English reading are you exposed to in your daily life?</b></p>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="">
+                                    News
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="">
+                                    Social media
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="">
+                                    English captions of movies or shows
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="">
+                                    Academic reading 
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="">
+                                    Books, magazines
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Other"><b>Other:</b></label>
+                            <input type="text" class="form-control" id="Other">
+                        </div>
+
+                        <!-- <div class="form-group">
+                            <label for="Language">Language:</label>
+                            <input type="text" class="form-control" id="Language" placeholder="Language">
+                        </div> -->
+                    </form>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <button id="btn3" type="button" class="btn btn-primary pull-right">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Start&nbsp;&nbsp;&nbsp;&nbsp;
-                        </button>
-                    </div>
+                <div class="col-md-2">
+                    
                 </div>
-                <div class="little-sep"></div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button id="btn3" type="button" class="btn btn-primary pull-right">
+                        &nbsp;&nbsp;&nbsp;&nbsp;Finish&nbsp;&nbsp;&nbsp;&nbsp;
+                    </button>
+                </div>
+            </div>
+            <div class="little-sep"></div>
         </div>
 
         <div id="div4" class="container">
@@ -315,13 +322,13 @@
             <div class="row">
                 <div class="col">
                     <div class="big-sep"></div>
-                    <h1>Trial</h1>
+                    <h1 class="text-center">Trial</h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
                     <button id="btn5" type="button" class="btn btn-primary pull-right">
-                        &nbsp;&nbsp;&nbsp;&nbsp;Next&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;Start&nbsp;&nbsp;&nbsp;&nbsp;
                     </button>
                 </div>
             </div>
@@ -375,7 +382,7 @@
             <div class="row">
                 <div class="col">
                     <button id="btn8" type="button" class="btn btn-primary pull-right">
-                        &nbsp;&nbsp;&nbsp;&nbsp;Next&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;Finish&nbsp;&nbsp;&nbsp;&nbsp;
                     </button>
                 </div>
             </div>
@@ -438,7 +445,7 @@
             <div class="row">
                 <div class="col">
                     <button id="btn9" type="button" class="btn btn-primary pull-right">
-                        &nbsp;&nbsp;&nbsp;&nbsp;Next&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;Finish&nbsp;&nbsp;&nbsp;&nbsp;
                     </button>
                 </div>
             </div>
@@ -469,8 +476,8 @@
             <div class="row">
                 <div class="col">
                     <div class="big-sep"></div>
-                    <h3>Passage 1</h3>
-                    <h5>Click “Start” to start reading the first passage</h5>
+                    <h3 class="text-center">Passage 1</h3>
+                    <h5 class="text-center">Click “Start” to start reading the first passage</h5>
                 </div>
             </div>
             <div class="row">
@@ -610,7 +617,7 @@
             <div class="row">
                 <div class="col">
                     <button id="btn15" type="button" class="btn btn-primary pull-right">
-                        &nbsp;&nbsp;&nbsp;&nbsp;Next&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;Finish&nbsp;&nbsp;&nbsp;&nbsp;
                     </button>
                 </div>
             </div>
@@ -624,8 +631,8 @@
             <div class="row">
                 <div class="col">
                     <div class="big-sep"></div>
-                    <h3>Passage 2</h3>
-                    <h5>Click “Start” to start reading the first passage</h5>
+                    <h3 class="text-center">Passage 2</h3>
+                    <h5 class="text-center">Click “Start” to start reading the first passage</h5>
                 </div>
             </div>
             <div class="row">
@@ -777,8 +784,8 @@
             <div class="row">
                 <div class="col">
                     <div class="big-sep"></div>
-                    <h3>Passage 3</h3>
-                    <h5>Click “Start” to start reading the first passage</h5>
+                    <h3 class="text-center">Passage 3</h3>
+                    <h5 class="text-center">Click “Start” to start reading the first passage</h5>
                 </div>
             </div>
             <div class="row">
@@ -930,8 +937,8 @@
             <div class="row">
                 <div class="col">
                     <div class="big-sep"></div>
-                    <h3>Passage 4</h3>
-                    <h5>Click “Start” to start reading the first passage</h5>
+                    <h3 class="text-center">Passage 4</h3>
+                    <h5 class="text-center">Click “Start” to start reading the first passage</h5>
                 </div>
             </div>
             <div class="row">
@@ -1083,8 +1090,8 @@
             <div class="row">
                 <div class="col">
                     <div class="big-sep"></div>
-                    <h3>Passage 5</h3>
-                    <h5>Click “Start” to start reading the first passage</h5>
+                    <h3 class="text-center">Passage 5</h3>
+                    <h5 class="text-center">Click “Start” to start reading the first passage</h5>
                 </div>
             </div>
             <div class="row">
@@ -1236,8 +1243,8 @@
             <div class="row">
                 <div class="col">
                     <div class="big-sep"></div>
-                    <h3>Passage 6</h3>
-                    <h5>Click “Start” to start reading the first passage</h5>
+                    <h3 class="text-center">Passage 6</h3>
+                    <h5 class="text-center">Click “Start” to start reading the first passage</h5>
                 </div>
             </div>
             <div class="row">
@@ -1388,12 +1395,9 @@
 
         <div id="div41" class="container">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col">
                     <div class="big-sep"></div>
-                    <h1>Thank you very much for participating in the study!</h1>
-                </div>
-                <div class="col-sm-8">
-                    <i class="fa fa-calendar-check-o big-icon"></i>
+                    <h3>Thank you very much for participating in the study!</h3>
                 </div>
             </div>
         </div>

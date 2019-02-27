@@ -18,9 +18,9 @@ function login() {
 
 $(function(){
     // hide all container exclude div1
-    for(let i=2;i<=41;i++) {
-        $("#div"+i.toString()).hide();
-    }
+    // for(let i=2;i<=41;i++) {
+    //     $("#div"+i.toString()).hide();
+    // }
 
     for(let i=1;i<41;i++) {
         $("#btn"+i.toString()).click(function(){
@@ -28,72 +28,6 @@ $(function(){
             $("#div"+(i+1).toString()).show();
         })
     }
-
-    // $("#btn1").click(function(){
-    //     $("#div1").hide();
-    //     $("#div2").show();
-    //     $("#title").text("Education background");
-    // })
-    
-    // $("#btn2").click(function(){
-    //     $("#div2").hide();
-    //     $("#div3").show();
-    //     $("#title").text("Reading");
-    // })
-    
-    // $("#btn3").click(function(){
-    //     $("#div3").hide();
-    //     $("#div4").show();
-    //     $("#title").text("Reading");
-    // })
-    
-    // $("#btn4").click(function(){
-    //     $("#div4").hide();
-    //     $("#div5").show();
-    //     $("#title").text("Reading");
-    // })
-    
-    // $("#btn5").click(function(){
-    //     $("#div5").hide();
-    //     $("#div6").show();
-    //     $("#title").text("Reading");
-    // })
-    
-    // $("#btn6").click(function(){
-    //     $("#div6").hide();
-    //     $("#div7").show();
-    //     $("#title").text("Reading");
-    // })
-    
-    // $("#btn7").click(function(){
-    //     $("#div7").hide();
-    //     $("#div8").show();
-    //     $("#title").text("Reading Comprehension");
-    // })
-    
-    // $("#btn8").click(function(){
-    //     $("#div8").hide();
-    //     $("#div9").show();
-    //     $("#title").text("Reading Comprehension");
-    // })
-
-    // $("#btn9").click(function(){
-    //     $("#div9").hide();
-    //     $("#div10").show();
-    //     $("#title").text("Reading Comprehension");
-    // })
-
-    // $("#btn10").click(function(){
-    //     $("#div10").hide();
-    //     $("#div11").show();
-    //     $("#title").text("Reading Comprehension");
-    // })
-
-    // $("#btn11").click(function(){
-    //     $("#div11").hide();
-    //     $("#div12").show();
-    //     $("#title").text("Reading Comprehension");
-    // })
     
     $("#btn40").click(function(){
         $("#div40").hide();

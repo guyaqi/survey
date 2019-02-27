@@ -17,10 +17,10 @@ function login() {
 
 
 $(function(){
-    // hide all container exclude div1
-    // for(let i=2;i<=41;i++) {
-    //     $("#div"+i.toString()).hide();
-    // }
+
+    for(let i=2;i<=41;i++) {
+        $("#div"+i.toString()).hide();
+    }
 
     for(let i=1;i<41;i++) {
         $("#btn"+i.toString()).click(function(){

@@ -18,7 +18,7 @@ function login() {
 
 $(function(){
     // hide all container exclude div1
-    for(var i=2;i<=10;i++) {
+    for(let i=2;i<=11;i++) {
         $("#div"+i.toString()).hide();
     }
 
@@ -69,10 +69,16 @@ $(function(){
         $("#div9").show();
         $("#title").text("Reading Comprehension");
     })
-    
+
     $("#btn9").click(function(){
         $("#div9").hide();
         $("#div10").show();
+        $("#title").text("Reading Comprehension");
+    })
+    
+    $("#btn10").click(function(){
+        $("#div10").hide();
+        $("#div11").show();
         $("#title").text("Thanks");
 
         var form = document.createElement("form");

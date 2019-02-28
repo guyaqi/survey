@@ -13,7 +13,7 @@ let surveyForm = {
     readingOthers:"",
     t:[],
     a:[]
-};
+}
 
 function submitSurvey() {
     $.ajax({
@@ -36,7 +36,7 @@ function submitSurvey() {
 $(function(){
 
     for(let i=2;i<=41;i++) {
-        $("#div"+i.toString()).hide();
+        $("#div"+i.toString()).hide()
     }
 
     for(let i=1;i<41;i++) {
@@ -67,6 +67,24 @@ $(function(){
         })
         surveyForm.readingOthers = $("#ReadingOther").val();
     })
+
+    $("#btn11").click(function(){
+        surveyForm.t[1] = new Date().getTime();
+    })
+
+    $("#btn12").click(function(){
+        surveyForm.t[1] = new Date().getTime() - surveyForm.t[1];
+        surveyForm.t[2] = new Date().getTime();
+    })
+
+    $("#btn13").click(function(){
+        surveyForm.t[2] = new Date().getTime() - surveyForm.t[1];
+        surveyForm.t[3] = new Date().getTime();
+    })
+
+    $("#btn14").click(function(){
+        surveyForm.t[3] = new Date().getTime() - surveyForm.t[1];
+    })
     
     $("#btn40").click(function(){
         $("#div40").hide();
@@ -74,19 +92,6 @@ $(function(){
         $("#title").text("Thanks");
 
         submitSurvey();
-
-        // var form = document.createElement("form");
-        // form.method = "post";
-        // form.action = "submit.php";
-
-        // form.hidden="hidden";
-        // form.id = "hiddenForm";
-        // document.body.appendChild(form);
-        
-        // form.target = "rfFrame";
-        // form.submit();
-
-
     })
 })
 

@@ -49,23 +49,23 @@ $(function(){
     // form of edu background
     $("#btn3").click(function(){
         surveyForm.age = $("#Age").val();
-        FirstLanguage = $("#FirstLang").val();
-        dailyLanguage = $("#DailyLang").val();
-        startEnglish = $("#StartEng").val();
+        surveyForm.FirstLanguage = $("#FirstLang").val();
+        surveyForm.dailyLanguage = $("#DailyLang").val();
+        surveyForm.startEnglish = $("#StartEng").val();
         
-        Education = $(":radio[name='r1']:checked").val()
+        surveyForm.Education = $(":radio[name='r1']:checked").val()
         $(":checkbox[name='c1']:checked").each(function(){
-            way += $(this).val();
+            surveyForm.way += $(this).val();
         })
-        wayOther = $("#WayOther").val();
-        live = $(":radio[name='r2']:checked").val()
-        long = $(":radio[name='r3']:checked").val()
-        rate = $(":radio[name='r4']:checked").val()
-        Education = $(":radio[name='r1']:checked").val()
+        surveyForm.wayOther = $("#WayOther").val();
+        surveyForm.live = $(":radio[name='r2']:checked").val()
+        surveyForm.long = $(":radio[name='r3']:checked").val()
+        surveyForm.rate = $(":radio[name='r4']:checked").val()
+        surveyForm.Education = $(":radio[name='r1']:checked").val()
         $(":checkbox[name='c2']:checked").each(function(){
-            reading += $(this).val();
+            surveyForm.reading += $(this).val();
         })
-        readingOthers = $("#ReadingOther").val();
+        surveyForm.readingOthers = $("#ReadingOther").val();
     })
     
     $("#btn40").click(function(){

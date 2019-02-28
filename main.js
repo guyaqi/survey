@@ -25,24 +25,42 @@ const answer = [null,
 ]
 
 function submitSurvey() {
-    $.ajax({
-        type: "POST",
-        dataType: "json",
+    // $.ajax({
+    //     type: "POST",
+    //     dataType: "json",
+    //     url: "submit.php" ,
+    //     data: surveyForm,
+    //     success: function (result) {
+    //         console.log("submit success!");
+    //         return false;
+    //     },
+    //     error : function() {
+    //         console.error("error occured to submit!");
+    //     }
+    // });
+    $.post({
         url: "submit.php" ,
         data: surveyForm,
-        success: function (result) {
-            console.log("submit success!");
-            return false;
+        success: function(data, textStatus, jqXHR){
+            console.log(data)
         },
-        error : function() {
-            console.error("error occured to submit!");
-        }
-    });
+    })
 }
 
 
 
 $(function(){
+
+    /* Debug code */
+
+    $("#btn0").click(function(){
+        submitSurvey();
+    })
+
+
+
+
+    /* End of debug code */
 
     // hide other divs
     for(let i=2;i<=41;i++) {

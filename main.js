@@ -15,6 +15,15 @@ let surveyForm = {
     a:[]
 }
 
+const answer = [null,
+    [null,4,1,3],
+    [null,3,1,3],
+    [null,1,2,3],
+    [null,3,4,2],
+    [null,2,4,1],
+    [null,3,2,4]
+]
+
 function submitSurvey() {
     $.ajax({
         type: "POST",
@@ -26,7 +35,7 @@ function submitSurvey() {
             return false;
         },
         error : function() {
-            console.error("err");
+            console.error("error occured to submit!");
         }
     });
 }
@@ -35,16 +44,52 @@ function submitSurvey() {
 
 $(function(){
 
+    // hide other divs
     for(let i=2;i<=41;i++) {
         $("#div"+i.toString()).hide()
     }
 
-    for(let i=1;i<41;i++) {
+    for(let i=1;i<=40;i++) {
         $("#btn"+i.toString()).click(function(){
+            // rc psg[1~6]
+            if(i>=15 && i<=40 && i%5==0) {
+                let psg = parseInt(i/5) - 2
+                let v = []
+                let sum = 0
+
+                for(let j=1;j<=3;j++) {
+                    v[j] = $(":radio[name='rc"+psg.toString()+j.toString()+"']:checked").val()
+                }
+                
+                for(let j=1;j<=3;j++) {
+                    if(v[j]==null) {
+                        alert("Please complete the questions.")
+                        return false;
+                    }
+                }
+
+                for(let j=1;j<=3;j++) {
+                    if(v[j]==answer[psg][j]) {
+                        sum += 1
+                    }
+                }
+                
+                surveyForm.a[psg] = sum/3
+            }
+
+            // next div
             $("#div"+i.toString()).hide();
             $("#div"+(i+1).toString()).show();
         })
     }
+
+    // rc psg[i]
+    for(let i=1;i<=6;i++) {
+        $("#btn"+(10+i*5).toString()).click(function(){
+            
+        })
+    }
+
 
     // form of edu background
     $("#btn3").click(function(){
@@ -68,6 +113,7 @@ $(function(){
         surveyForm.readingOthers = $("#ReadingOther").val();
     })
 
+    // clock psg1
     $("#btn11").click(function(){
         surveyForm.t[1] = new Date().getTime();
     })
@@ -78,19 +124,124 @@ $(function(){
     })
 
     $("#btn13").click(function(){
-        surveyForm.t[2] = new Date().getTime() - surveyForm.t[1];
+        surveyForm.t[2] = new Date().getTime() - surveyForm.t[2];
         surveyForm.t[3] = new Date().getTime();
     })
 
     $("#btn14").click(function(){
-        surveyForm.t[3] = new Date().getTime() - surveyForm.t[1];
+        surveyForm.t[3] = new Date().getTime() - surveyForm.t[3];
     })
+
+    // clock psg2
+    $("#btn16").click(function(){
+        surveyForm.t[4] = new Date().getTime();
+    })
+
+    $("#btn17").click(function(){
+        surveyForm.t[4] = new Date().getTime() - surveyForm.t[4];
+        surveyForm.t[5] = new Date().getTime();
+    })
+
+    $("#btn18").click(function(){
+        surveyForm.t[5] = new Date().getTime() - surveyForm.t[5];
+        surveyForm.t[6] = new Date().getTime();
+    })
+
+    $("#btn19").click(function(){
+        surveyForm.t[6] = new Date().getTime() - surveyForm.t[6];
+    })
+
+
+    // clock psg3
+
+    $("#btn21").click(function(){
+        surveyForm.t[7] = new Date().getTime();
+    })
+
+    $("#btn22").click(function(){
+        surveyForm.t[7] = new Date().getTime() - surveyForm.t[7];
+        surveyForm.t[8] = new Date().getTime();
+    })
+
+    $("#btn23").click(function(){
+        surveyForm.t[8] = new Date().getTime() - surveyForm.t[8];
+        surveyForm.t[9] = new Date().getTime();
+    })
+
+    $("#btn24").click(function(){
+        surveyForm.t[9] = new Date().getTime() - surveyForm.t[9];
+    })
+
+
+    // clock psg4
+
+    $("#btn26").click(function(){
+        surveyForm.t[10] = new Date().getTime();
+    })
+
+    $("#btn27").click(function(){
+        surveyForm.t[10] = new Date().getTime() - surveyForm.t[10];
+        surveyForm.t[11] = new Date().getTime();
+    })
+
+    $("#btn28").click(function(){
+        surveyForm.t[11] = new Date().getTime() - surveyForm.t[11];
+        surveyForm.t[12] = new Date().getTime();
+    })
+
+    $("#btn29").click(function(){
+        surveyForm.t[12] = new Date().getTime() - surveyForm.t[12];
+    })
+
+
+    // clock psg5
+
+    $("#btn31").click(function(){
+        surveyForm.t[13] = new Date().getTime();
+    })
+
+    $("#btn32").click(function(){
+        surveyForm.t[13] = new Date().getTime() - surveyForm.t[13];
+        surveyForm.t[14] = new Date().getTime();
+    })
+
+    $("#btn33").click(function(){
+        surveyForm.t[14] = new Date().getTime() - surveyForm.t[14];
+        surveyForm.t[15] = new Date().getTime();
+    })
+
+    $("#btn34").click(function(){
+        surveyForm.t[15] = new Date().getTime() - surveyForm.t[15];
+    })
+
+
+    // clock psg6
+
+    $("#btn36").click(function(){
+        surveyForm.t[16] = new Date().getTime();
+    })
+
+    $("#btn37").click(function(){
+        surveyForm.t[16] = new Date().getTime() - surveyForm.t[16];
+        surveyForm.t[17] = new Date().getTime();
+    })
+
+    $("#btn38").click(function(){
+        surveyForm.t[17] = new Date().getTime() - surveyForm.t[17];
+        surveyForm.t[18] = new Date().getTime();
+    })
+
+    $("#btn39").click(function(){
+        surveyForm.t[18] = new Date().getTime() - surveyForm.t[18];
+    })
+
     
     $("#btn40").click(function(){
         $("#div40").hide();
         $("#div41").show();
         $("#title").text("Thanks");
 
+        console.log(surveyForm)
         submitSurvey();
     })
 })

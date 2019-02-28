@@ -1,11 +1,28 @@
-function login() {
+let surveyForm = {
+    age:0,
+    FirstLanguage:"",
+    dailyLanguage:"",
+    startEnglish:0,
+    Education:0,
+    way:"",
+    wayOther:"",
+    live:0,
+    long:0,
+    rate:0,
+    reading:"",
+    readingOthers:"",
+    t:[],
+    a:[]
+};
+
+function submitSurvey() {
     $.ajax({
         type: "POST",
         dataType: "json",
         url: "submit.php" ,
-        data: $('#hiddenForm').serialize(),
+        data: surveyForm,
         success: function (result) {
-            console.log("Hello");
+            console.log("submit success!");
             return false;
         },
         error : function() {
@@ -28,53 +45,47 @@ $(function(){
             $("#div"+(i+1).toString()).show();
         })
     }
+
+    // form of edu background
+    $("#btn3").click(function(){
+        surveyForm.age = $("#Age").val();
+        FirstLanguage = $("#FirstLang").val();
+        dailyLanguage = $("#DailyLang").val();
+        startEnglish = $("#StartEng").val();
+        
+        Education = $(":radio[name='r1']:checked").val()
+        $(":checkbox[name='c1']:checked").each(function(){
+            way += $(this).val();
+        })
+        wayOther = $("#WayOther").val();
+        live = $(":radio[name='r2']:checked").val()
+        long = $(":radio[name='r3']:checked").val()
+        rate = $(":radio[name='r4']:checked").val()
+        Education = $(":radio[name='r1']:checked").val()
+        $(":checkbox[name='c2']:checked").each(function(){
+            reading += $(this).val();
+        })
+        readingOthers = $("#ReadingOther").val();
+    })
     
     $("#btn40").click(function(){
         $("#div40").hide();
         $("#div41").show();
         $("#title").text("Thanks");
 
-        var form = document.createElement("form");
-        form.method = "post";
-        form.action = "submit.php";
+        submitSurvey();
 
-        var nameInput = document.createElement("input");
-        nameInput.setAttribute("name", "Name");
-        nameInput.setAttribute("value", $("#Name").val());
-        form.appendChild(nameInput);
+        // var form = document.createElement("form");
+        // form.method = "post";
+        // form.action = "submit.php";
 
-        var ageInput = document.createElement("input");
-        ageInput.setAttribute("name", "Age");
-        ageInput.setAttribute("value", $("#Age").val());
-        form.appendChild(ageInput);
-
-        var eduInput = document.createElement("input");
-        eduInput.setAttribute("name", "Education");
-        eduInput.setAttribute("value", $("#Education").val());
-        form.appendChild(eduInput);
-
-        var langInput = document.createElement("input");
-        langInput.setAttribute("name", "Language");
-        langInput.setAttribute("value", $("#Language").val());
-        form.appendChild(langInput);
-
-        var flangInput = document.createElement("input");
-        flangInput.setAttribute("name", "FirstLanguage");
-        flangInput.setAttribute("value", $("#FirstLanguage").val());
-        form.appendChild(flangInput);
-
-        var ltInput = document.createElement("input");
-        ltInput.setAttribute("name", "LearntTime");
-        ltInput.setAttribute("value", $("#LearntTime").val());
-        form.appendChild(ltInput);
-
-        form.hidden="hidden";
-        form.id = "hiddenForm";
-        document.body.appendChild(form);
+        // form.hidden="hidden";
+        // form.id = "hiddenForm";
+        // document.body.appendChild(form);
         
-        form.target = "rfFrame";
-        form.submit();
-        // login();
+        // form.target = "rfFrame";
+        // form.submit();
+
 
     })
 })

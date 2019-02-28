@@ -25,19 +25,6 @@ const answer = [null,
 ]
 
 function submitSurvey() {
-    // $.ajax({
-    //     type: "POST",
-    //     dataType: "json",
-    //     url: "submit.php" ,
-    //     data: surveyForm,
-    //     success: function (result) {
-    //         console.log("submit success!");
-    //         return false;
-    //     },
-    //     error : function() {
-    //         console.error("error occured to submit!");
-    //     }
-    // });
     $.post({
         url: "submit.php" ,
         data: surveyForm,

@@ -99,21 +99,21 @@
                     <form id="f1">
                         <div class="form-group">
                             <label for="Age"><b>Age:</b></label>
-                            <input type="text" class="form-control" id="Age">
+                            <input type="text" class="form-control" id="Age" onkeyup="this.value=this.value.replace(/\D/g,'')">
                         </div>
                         <div class="form-group">
                             <label for="FirstLang"><b>First Languages:</b></label>
-                            <input type="text" class="form-control" id="FirstLang">
+                            <input type="text" class="form-control" id="FirstLang" onkeyup="this.value=this.value.replace(/[^a-zA-Z\s]/g,'')">
                         </div>
                         <div class="form-group">
                             <label for="DailyLang"><b>Most used language in your daily life:</b></label>
-                            <input type="text" class="form-control" id="DailyLang">
+                            <input type="text" class="form-control" id="DailyLang" onkeyup="this.value=this.value.replace(/[^a-zA-Z\s]/g,'')">
                         </div>
                         <div class="form-group">
                             <label for="StartEng"><b>At what age did you start learning English?</b>
                                 <span style="color:grey">(Type 0 if your first language is English)</span>:
                             </label>
-                            <input type="text" class="form-control" id="StartEng">
+                            <input type="text" class="form-control" id="StartEng" onkeyup="this.value=this.value.replace(/\D/g,'')">
                         </div>
                         <div class="form-group">
                             <p><b>How would you describe your educational background?</b></p>
@@ -172,7 +172,7 @@
 
                         <div class="form-group">
                             <label for="Other"><b>Other:</b></label>
-                            <input type="text" class="form-control" id="WayOther">
+                            <input type="text" class="form-control" id="WayOther" onkeyup="this.value=this.value.replace(/[^a-zA-Z\s\d]/g,'')">
                         </div>
 
                         <div class="form-group">
@@ -275,7 +275,7 @@
 
                         <div class="form-group">
                             <label for="Other"><b>Other:</b></label>
-                            <input type="text" class="form-control" id="ReadingOther">
+                            <input type="text" class="form-control" id="ReadingOther" onkeyup="this.value=this.value.replace(/[^a-zA-Z\s\d]/g,'')">
                         </div>
 
                     </form>
@@ -408,22 +408,22 @@
                         <div class="form-group">
                             <p><b>Q1: What did Brian lose?</b></p>
                             <div class="radio">
-                                <label><input type="radio" name="optradio">
+                                <label><input type="radio" name="tr1">
                                     A wooden axe.
                                 </label>
                             </div>
                             <div class="radio">
-                                <label><input type="radio" name="optradio">
+                                <label><input type="radio" name="tr1">
                                     A silver axe.
                                 </label>
                             </div>
                             <div class="radio">
-                                <label><input type="radio" name="optradio">
+                                <label><input type="radio" name="tr1">
                                     A golden axe.
                                 </label>
                             </div>
                             <div class="radio">
-                                <label><input type="radio" name="optradio">
+                                <label><input type="radio" name="tr1">
                                     Nothing.
                                 </label>
                             </div>
@@ -431,22 +431,22 @@
                         <div class="form-group">
                             <p><b>Q2: Why did the god gave Brian the golden axe?</b></p>
                             <div class="radio">
-                                <label><input type="radio" name="optradio">
+                                <label><input type="radio" name="tr2">
                                     Because it belonged to Brian.
                                 </label>
                             </div>
                             <div class="radio">
-                                <label><input type="radio" name="optradio">
+                                <label><input type="radio" name="tr2">
                                     Because Brian was truthful.
                                 </label>
                             </div>
                             <div class="radio">
-                                <label><input type="radio" name="optradio">
+                                <label><input type="radio" name="tr2">
                                     Because Brian was hardworking.
                                 </label>
                             </div>
                             <div class="radio">
-                                <label><input type="radio" name="optradio">
+                                <label><input type="radio" name="tr2">
                                     Because the god liked Brian a lot.
                                 </label>
                             </div>

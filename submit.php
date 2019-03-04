@@ -22,8 +22,8 @@
     $t = $_REQUEST['t'];
     $a = $_REQUEST['a'];
     for($i=1;$i<6;$i++) {
-        if($a[i] == null) {
-            $a[i] = 0;
+        if($a[$i] == null) {
+            $a[$i] = 0;
         }
     }
 
@@ -61,7 +61,7 @@
         $conn->exec($sql);
         $conn = null;
     } catch (PDOException $e) {
-        // echo("<br/><b>sql:</b>$sql <br/><br/>");
+        echo("<br/><b>sql:</b>$sql <br/><br/>");
         
         echo $e->getMessage();
     }

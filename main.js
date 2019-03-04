@@ -25,12 +25,15 @@ const answer = [null,
 ]
 
 function submitSurvey() {
-    $.post({
+    $.ajax({
         url: "submit.php" ,
         data: surveyForm,
         success: function(data, textStatus, jqXHR){
             console.log('success')
         },
+        error: function(xmlHttpRequest) {
+            console.error('error')
+        }
     })
 }
 

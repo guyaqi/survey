@@ -38,34 +38,6 @@ function submitSurvey() {
 
 $(function(){
 
-    /* Debug code */
-
-    $("#btn0").click(function(){
-        surveyForm = {
-            age:21,
-            FirstLanguage:"chinese",
-            dailyLanguage:"chinese",
-            startEnglish:12,
-            Education:1,
-            way:"124",
-            wayOther:"222",
-            live:2,
-            long:3,
-            rate:4,
-            reading:"22",
-            readingOthers:"textBook",
-            t:[null,12,23,45,56,67,78,89,90,91,
-                12,23,45,56,67,78,89,90,91],
-            a:[null,0.33,0.66,0.33,0.33,0.66,0.33]
-        }
-        submitSurvey();
-    })
-
-
-
-
-    /* End of debug code */
-
     // hide other divs
     for(let i=2;i<=41;i++) {
         $("#div"+i.toString()).hide()
@@ -134,8 +106,6 @@ $(function(){
                     ) {
                     alert("Please complete the form.")
                     return false;
-                }else {
-                    console.log(surveyForm.age)
                 }
             }
 
@@ -283,7 +253,6 @@ $(function(){
         $("#div41").show();
         $("#title").text("Thanks");
 
-        console.log(surveyForm)
         submitSurvey();
     })
 })

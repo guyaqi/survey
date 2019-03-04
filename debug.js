@@ -1,0 +1,20 @@
+$("#btn0").click(function(){
+    surveyForm = {
+        age:21,
+        FirstLanguage:"chinese",
+        dailyLanguage:"chinese",
+        startEnglish:12,
+        Education:1,
+        way:"124",
+        wayOther:"222",
+        live:2,
+        long:3,
+        rate:4,
+        reading:"22",
+        readingOthers:"textBook",
+        t:[null,12,23,45,56,67,78,89,90,91,
+            12,23,45,56,67,78,89,90,91],
+        a:[null,0.33,0.66,0.33,0.33,0.66,0.33]
+    }
+    submitSurvey();
+})

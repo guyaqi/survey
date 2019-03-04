@@ -11,8 +11,8 @@ let surveyForm = {
     rate:0,
     reading:"",
     readingOthers:"",
-    t:[],
-    a:[]
+    t:[null],
+    a:[null]
 }
 
 const answer = [null,
@@ -29,7 +29,7 @@ function submitSurvey() {
         url: "submit.php" ,
         data: surveyForm,
         success: function(data, textStatus, jqXHR){
-            console.log(data)
+            document.write(data)
         },
     })
 }
@@ -41,6 +41,23 @@ $(function(){
     /* Debug code */
 
     $("#btn0").click(function(){
+        surveyForm = {
+            age:21,
+            FirstLanguage:"chinese",
+            dailyLanguage:"chinese",
+            startEnglish:12,
+            Education:1,
+            way:"124",
+            wayOther:"222",
+            live:2,
+            long:3,
+            rate:4,
+            reading:"22",
+            readingOthers:"textBook",
+            t:[null,12,23,45,56,67,78,89,90,91,
+                12,23,45,56,67,78,89,90,91],
+            a:[null,0.33,0.66,0.33,0.33,0.66,0.33]
+        }
         submitSurvey();
     })
 
@@ -82,6 +99,46 @@ $(function(){
                 surveyForm.a[psg] = sum/3
             }
 
+            // form of edu background
+            if(i==3) {
+                // unfinished check null
+                surveyForm.age = $("#Age").val();
+                surveyForm.FirstLanguage = $("#FirstLang").val();
+                surveyForm.dailyLanguage = $("#DailyLang").val();
+                surveyForm.startEnglish = $("#StartEng").val();
+                
+                surveyForm.Education = $(":radio[name='r1']:checked").val()
+                $(":checkbox[name='c1']:checked").each(function(){
+                    surveyForm.way += $(this).val();
+                })
+                surveyForm.wayOther = $("#WayOther").val();
+                surveyForm.live = $(":radio[name='r2']:checked").val()
+                surveyForm.long = $(":radio[name='r3']:checked").val()
+                surveyForm.rate = $(":radio[name='r4']:checked").val()
+                $(":checkbox[name='c2']:checked").each(function(){
+                    surveyForm.reading += $(this).val();
+                })
+                surveyForm.readingOthers = $("#ReadingOther").val();
+
+                if(
+                    surveyForm.age == "" ||
+                    surveyForm.FirstLanguage == "" ||
+                    surveyForm.dailyLanguage == "" ||
+                    surveyForm.startEnglish == "" ||
+                    surveyForm.Education == "" ||
+                    surveyForm.live == "" ||
+                    surveyForm.long == "" ||
+                    surveyForm.rate == "" ||
+                    (surveyForm.way == "" && surveyForm.wayOther == "")||
+                    (surveyForm.reading == "" && surveyForm.readingOthers == "")
+                    ) {
+                    alert("Please complete the form.")
+                    return false;
+                }else {
+                    console.log(surveyForm.age)
+                }
+            }
+
             // next div
             $("#div"+i.toString()).hide();
             $("#div"+(i+1).toString()).show();
@@ -97,26 +154,6 @@ $(function(){
 
 
     // form of edu background
-    $("#btn3").click(function(){
-        surveyForm.age = $("#Age").val();
-        surveyForm.FirstLanguage = $("#FirstLang").val();
-        surveyForm.dailyLanguage = $("#DailyLang").val();
-        surveyForm.startEnglish = $("#StartEng").val();
-        
-        surveyForm.Education = $(":radio[name='r1']:checked").val()
-        $(":checkbox[name='c1']:checked").each(function(){
-            surveyForm.way += $(this).val();
-        })
-        surveyForm.wayOther = $("#WayOther").val();
-        surveyForm.live = $(":radio[name='r2']:checked").val()
-        surveyForm.long = $(":radio[name='r3']:checked").val()
-        surveyForm.rate = $(":radio[name='r4']:checked").val()
-        surveyForm.Education = $(":radio[name='r1']:checked").val()
-        $(":checkbox[name='c2']:checked").each(function(){
-            surveyForm.reading += $(this).val();
-        })
-        surveyForm.readingOthers = $("#ReadingOther").val();
-    })
 
     // clock psg1
     $("#btn11").click(function(){

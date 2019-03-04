@@ -29,11 +29,10 @@ function submitSurvey() {
         url: "submit.php" ,
         data: surveyForm,
         success: function(data, textStatus, jqXHR){
-            document.write(data)
+            console.log('success')
         },
     })
 }
-
 
 
 $(function(){

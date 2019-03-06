@@ -1,9 +1,8 @@
-CREATE TABLE IF NOT EXISTS `lang_survey`(
+CREATE TABLE `lang_survey`(
    `id` INT AUTO_INCREMENT,
    `age` INT NOT NULL,
    `first_lang` VARCHAR(64) NOT NULL,
    `daily_lang` VARCHAR(64) NOT NULL,
-
    `start_english` INT NOT NULL,
    `education` INT NOT NULL,
    `way` VARCHAR(64),

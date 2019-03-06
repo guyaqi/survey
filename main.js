@@ -29,7 +29,7 @@ function submitSurvey() {
         url: "submit.php" ,
         data: surveyForm,
         success: function(data, textStatus, jqXHR){
-            console.log('success')
+            console.log(data)
         },
         error: function(xmlHttpRequest) {
             console.error('error')
